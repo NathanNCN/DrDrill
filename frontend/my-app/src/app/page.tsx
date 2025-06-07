@@ -5,13 +5,13 @@ import WorkoutContainer from "./components/WorkoutContainer";
 import {useEffect, useState, useRef} from "react"
 
 // Const to store the type writer text
-const introText = `ATTENTION! I'm Dr. Drill, your personal coach. I'm 
-            here to help you master your skills, push your limits, and destroy your goals. Add your workouts, set a
-            time span, and get ready to WORK! Together, we'll battle the dreaded sickness called losing, and I'll be 
-            the medicine to help you fight against it. `
+const introText = `ATTENTION! I'm Dr. Drill, your personal coach. I'm here to help you master your skills,
+ push your limits, and crush your goals. Add your workouts, set a time span, and I'll randomly shout a workout
+ every 2 to 10 seconds! Together, we'll battle the dreaded sickness called losing.
+ No mercy. No excuses. Just results.`
 
 // length of text above
-const textLength = 360
+const textLength = 354
 
 export default function Home() {
 

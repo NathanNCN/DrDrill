@@ -64,25 +64,31 @@ function Workouts () {
     }, [workoutList.length]);
 
     return <>
-            <h2 className="text-white font-mono text-3xl md:text-5xl lg:text-6xl text-center mt-5 md:mt-10">Workouts</h2>
-            <form className="flex flex-col h-[200px] md:h-[250px] lg:h-[280px] overflow-y-auto justify-start items-center w-full max-w-2xl px-4"> 
-               
-                {/* Loop through each element of NumInputs then create a WorkoutInput */}
-                {NumInputs.map((id)=>{
-                    return <WorkoutInput 
-                        key={id} 
-                        id={id.toString()} 
-                        remove={onChange}
-                        onWorkoutChange={handleWorkoutChange}
-                        value={workouts[id.toString()] || ""}
-                    />
-                })}
-            </form>
-            <button type="button" name="add" onClick={onChange} className="mt-4 bg-green-800 text-white px-6 py-3 rounded-lg border-2 border-green-500 shadow-lg shadow-green-500/20 hover:bg-green-700 transition-colors"> Add </button>
-            
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 w-full max-w-6xl items-start lg:items-center justify-center">
+                {/* Workouts Section */}
+                <div className="flex flex-col items-center w-full lg:w-1/2">
+                    <h2 className="text-white font-mono text-3xl md:text-5xl lg:text-6xl text-center mt-5 md:mt-10">Workouts</h2>
+                    <form className="flex flex-col h-[200px] md:h-[250px] lg:h-[280px] overflow-y-auto justify-start items-center w-full max-w-2xl px-4"> 
+                       
+                        {/* Loop through each element of NumInputs then create a WorkoutInput */}
+                        {NumInputs.map((id)=>{
+                            return <WorkoutInput 
+                                key={id} 
+                                id={id.toString()} 
+                                remove={onChange}
+                                onWorkoutChange={handleWorkoutChange}
+                                value={workouts[id.toString()] || ""}
+                            />
+                        })}
+                    </form>
+                    <button type="button" name="add" onClick={onChange} className="mt-4 bg-green-800 text-white px-6 py-3 rounded-lg border-2 border-green-500 shadow-lg shadow-green-500/20 hover:bg-green-700 transition-colors"> Add </button>
+                </div>
 
-            
-            <Timer Open={openTime} workouts={workoutList}/>
+                {/* Timer Section */}
+                <div className="w-full lg:w-1/2 flex justify-center">
+                    <Timer Open={openTime} workouts={workoutList}/>
+                </div>
+            </div>
     </>
 }
 
