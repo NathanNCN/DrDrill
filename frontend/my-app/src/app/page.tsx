@@ -1,9 +1,7 @@
 'use client'
 
-//imports
-import Image from "next/image";
+//import
 import WorkoutContainer from "./components/WorkoutContainer";
-import Timer from "./components/Timer";
 import {useEffect, useState, useRef} from "react"
 
 // Const to store the type writer text
