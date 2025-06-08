@@ -10,7 +10,7 @@
 
 # Features
 - **Customize workouts**
- - Set desired workouts and duration of workout for your personalized workout
+  - Set desired workouts and duration of workout for your personalized workout
 - **Audio**
   - Workouts will be shouted out every 2-10 seconds
 - **Simulates Coaching**
